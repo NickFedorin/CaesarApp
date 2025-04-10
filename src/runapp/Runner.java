@@ -5,6 +5,7 @@ import crypt.CriptService;
 import readAndwrite.FileService;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.Arrays;
 
 public class Runner {
     private String encryptedFile = "ENCRYPTED";
@@ -14,6 +15,7 @@ public class Runner {
     private int key;
 
     public void run(String[] args) throws IOException {
+        System.out.println("Args: " + Arrays.toString(args));
         Path path = Path.of(args[1]);
         key = Integer.parseInt(args[2]);
         mode = args[0];

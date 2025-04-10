@@ -5,9 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
 
-//Логіка читання і запису файлів
 public class FileService {
-    // Зчитування файлу як символів у StringBuilder
     public StringBuilder readFile(Path path) {
         StringBuilder builder = new StringBuilder();
         try (FileReader reader = new FileReader(path.toFile())) {
@@ -21,11 +19,10 @@ public class FileService {
         return builder;
     }
 
-    // Запис символів із StringBuilder у файл з модифікованою назвою
     public void writeFile(Path originalPath, StringBuilder text, String mode) {
         try {
             String fileName = originalPath.getFileName().toString();
-            String parent = originalPath.getParent() != null ? originalPath.getParent().toString() + "/" : "";
+            String parent = originalPath.getParent() != null ? originalPath.getParent() + "/" : "";
 
             String newFileName = getModifiedName(fileName, mode);
             Path newPath = Path.of(parent + newFileName);
@@ -39,7 +36,6 @@ public class FileService {
         }
     }
 
-    // Метод для формування нової назви файлу
     private String getModifiedName(String fileName, String mode) {
         int dotIndex = fileName.lastIndexOf('.');
         if (dotIndex != -1) {
