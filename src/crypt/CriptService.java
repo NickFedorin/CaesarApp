@@ -3,7 +3,6 @@ package crypt;
 import constant.Alphabets;
 import java.util.ArrayList;
 
-//Логіка зашифрування файлу
 public class CriptService {
     StringBuilder text;
 
