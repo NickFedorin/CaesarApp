@@ -3,7 +3,9 @@ package constant;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Alphabets {
+public final class Alphabets {
+
+    private Alphabets() {}
     public static final ArrayList<Character> ALPHABET_EN = new ArrayList<>(
             Arrays.asList('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
                     'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
