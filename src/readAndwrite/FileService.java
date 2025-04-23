@@ -14,7 +14,7 @@ public class FileService {
                 builder.append((char) c);
             }
         } catch (IOException e) {
-            throw new RuntimeException("Помилка читання файлу: " + path, e);
+            throw new RuntimeException("File reading error: " + path, e);
         }
         return builder;
     }
@@ -32,7 +32,7 @@ public class FileService {
             }
 
         } catch (IOException e) {
-            throw new RuntimeException("Помилка запису у файл", e);
+            throw new RuntimeException("File writing error", e);
         }
     }
 
