@@ -17,7 +17,7 @@ public class Runner {
     private int key;
 
     public void run(String[] args) throws IOException {
-        if(args.length<2){
+        if(args.length<1){
             System.out.println("Enter the correct arguments");
         }
         mode = args[0];
